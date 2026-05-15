@@ -39,12 +39,65 @@
         body.clouds     { background-image: linear-gradient(135deg, #636e72, #b2bec3, #dfe6e9); }
         body.rain       { background-image: linear-gradient(135deg, #2d3436, #636e72, #b2bec3); }
         body.night      { background-image: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
-        .navbar {
-            background: rgba(44, 62, 80, 0.8) !important;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.2);
-        }
-        .navbar-brand { font-size: 2.0rem; font-weight: 600; letter-spacing: 1px; }
+       .navbar {
+    background: rgba(44, 62, 80, 0.8) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    padding: 0.8rem 1rem;
+}
+
+/* Base (desktop default) */
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+   
+    white-space: nowrap;
+}
+
+/* Large tablets */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
+}
+
+/* Tablets and small laptops */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.7rem 0.9rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+        letter-spacing: 0.3px;
+    }
+
+    .navbar-brand i {
+        font-size: 1rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}
         .navbar-brand strong {
             color: var(--primary-color);
             background: -webkit-linear-gradient(var(--primary-color), var(--secondary-color));
@@ -416,7 +469,7 @@
     <!-- Navbar  -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
-            <a href="/" class="navbar-brand"><i class="fas fa-cloud-sun-rain mr-2"></i><strong>Real-Time</strong> Weather App</a>
+            <a href="/" class="navbar-brand"><i class="fas fa-cloud-sun-rain mr-2"></i><strong>Weather</strong>Fusion</a>
         </div>
     </nav>
 
@@ -534,7 +587,7 @@
         {% if forecast %}
         <div class="forecast-section slide-in" id="forecastSection" style="display:none;">
             <h5><i class="fas fa-calendar-alt mr-2"></i>5-Day Forecast
-                <small style="font-size:larger; font-weight:600; color:#050505; margin-left:8px;">
+                <small style="font-size:larger; font-weight:600; color:#f0ebeb; margin-left:8px;">
                     Click any day for details ↓
                 </small>
             </h5>
