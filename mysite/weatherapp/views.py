@@ -281,7 +281,7 @@ def index(request):
             logger.warning(f"Forecast error: {e}")
 
         
-        # FIXED CONTEXT 
+        #  CONTEXT 
         
         data = {
             "city": current["name"],
