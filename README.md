@@ -8,7 +8,9 @@ The **Real-Time Weather App** is a simple yet powerful Django-based web applicat
 - 🌍 Search weather by city name
 - 📊 Displays temperature, humidity, pressure, and weather conditions
 - 🕒 Real-time data updates
+-   weather forecasts for upcoming days
 - 🔎 Simple and clean user interface
+  
 
 ## 🛠️ Technologies Used
 
